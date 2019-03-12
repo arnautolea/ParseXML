@@ -80,19 +80,15 @@ public class ParseDomXml {
                   nElement = (Element) nNode;
                System.out.println("Skills : " 
                   + nElement.getAttribute("skills"));
-               
-               NodeList sList = nElement.getElementsByTagName("skills");
-               for (int s = 0; s < sList.getLength(); s++) {
-            	   Node sNode = sList.item(s);
-                   Element sElement = (Element) sNode;
-                   		if (sNode.getNodeType() == Node.ELEMENT_NODE) {
-               				System.out.println("Skill : " 
-									+ sElement
-									.getElementsByTagName("skill")
-									.item(s)
-									.getTextContent());
-               			}
-                }//why this loop do not return ALL elements by tag name skill???(((((
+        
+               for (int s = 0; s < nElement.getElementsByTagName("skill").getLength(); s++) { ////doshlo bliiiin!!!
+  				System.out.println("Skill : " 
+			      + nElement
+				  .getElementsByTagName("skill")
+				  .item(s)
+				  .getTextContent());
+               			
+                }
                
                System.out.println("Manager : " 
                   + nElement
