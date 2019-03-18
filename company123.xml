@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<company>
+	<department name="Development" depId="1">
+		<employee empId="001">
+			<lastname>Washington</lastname>
+			<firstname>George</firstname>
+			<birthDate>February 22, 1732</birthDate>
+			<position>First US President</position>
+			<skills>
+				<skill>Powers of persuasion</skill>
+				<skill>Ability to unify</skill>
+				<skill>Empowering others</skill>
+			</skills>
+			<managerId>0</managerId>
+		</employee>
+		<employee empId="002">
+			<lastname>Adams</lastname>
+			<firstname>John</firstname>
+			<birthDate>October 30, 1735</birthDate>
+			<position>Second US President</position>
+			<skills>
+				<skill>A great communicator</skill>
+				<skill>Successful lawyer</skill>
+			</skills>
+			<managerId>001</managerId>
+		</employee>
+	</department>
+	<department name="Accounting" depId="2">
+		<employee empId="003">
+			<lastname>Jefferson</lastname>
+			<firstname>Thomas</firstname>
+			<birthDate>April 13, 1743</birthDate>
+			<position>Third US President</position>
+			<skills>
+				<skill>Sense of Justice</skill>
+				<skill>Great understanding of history and politics</skill>
+				<skill>Open mind for learning</skill>
+				<skill>Follower of truth and reason</skill>
+			</skills>
+			<managerId>001</managerId>
+		</employee>
+		<employee empId="004">
+			<lastname>Madison</lastname>
+			<firstname>James</firstname>
+			<birthDate>March 16, 1751</birthDate>
+			<position>Fourth US President</position>
+			<skills>
+				<skill>Knowledge of constitutionalism</skill>
+				<skill>Critical thinking</skill>
+			</skills>
+			<managerId>003</managerId>
+		</employee>
+	</department>
+</company>
