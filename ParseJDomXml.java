@@ -12,6 +12,7 @@ import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
 
 public class ParseJDomXml {
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 
 		  SAXBuilder builder = new SAXBuilder();
@@ -42,7 +43,11 @@ public class ParseJDomXml {
 		    List<Element> slist = enode.getChildren("skills");
 		    for (int s = 0; s < slist.size(); s++) {
 			Element snode = (Element) slist.get(s);
-			    System.out.println("Skill : " + snode.getValue());
+			if(snode.getChildText("skill") != null)     
+			System.out.println("Skill : " + snode.getChildText("skill")); //why only first child????
+			else {
+				System.out.println("");
+			}
 			}//for skill
 			}//for employee
 			}//for department

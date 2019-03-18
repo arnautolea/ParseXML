@@ -54,24 +54,7 @@ public class ParseJdom2Xml {
             List<Element> skills = employee.getChildren("skills");
             for (Element skill : skills) {
                 System.out.println("Skill : "+ skill.getValue());
-            }
-
-//            List<Element> skills = employee.getChildren("skills");
-//            for (Element skill : skills) {
-//            if (skill.getName().equals("skills")) {
-//            	System.out.println("Skill: " + skill.getChildText("skill"));
-//            }
-//            } //output only first child          
-            
-//            List<Element> skillList = employee.getChildren();
-//          for (int s = 0; s < skillList.size(); s++) {
-//            Element skill = skillList.get(s);
-//            if(skill.getName().equals("skills")) {
-//            System.out.println("Skill : " + skill.getChildText("skill"));
-//           
-//            }
-//            }//output only first child 
-            
+              }
          System.out.println("Manager : " + employee.getChild("managerId").getText());
          }
       }         
