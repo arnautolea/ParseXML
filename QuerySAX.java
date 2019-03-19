@@ -36,6 +36,7 @@ class UserHandler2 extends DefaultHandler {
    boolean bSkill = false;
    boolean bManager = false;
    String empId = null;
+   String id = "001";
    
    @Override
    public void startElement(
@@ -45,7 +46,7 @@ class UserHandler2 extends DefaultHandler {
 	      if (qName.equalsIgnoreCase("employee")) {
 	    	  empId = attributes.getValue("empId");
 	       }
-	       if(("001").equals(empId) && qName.equalsIgnoreCase("employee")) {
+	      if((id).equals(empId) && qName.equalsIgnoreCase("employee")) {
 	          System.out.println("Start Element :" + qName); 
 	          System.out.println("EmpId: " + empId);
 	       }  
@@ -70,32 +71,32 @@ class UserHandler2 extends DefaultHandler {
    public void endElement(String uri, 
       String localName, String qName) throws SAXException {
       
-	   if (qName.equalsIgnoreCase("employee") && ("001").equals(empId)) {
+	   if (qName.equalsIgnoreCase("employee") && (id).equals(empId)) {
 	            System.out.println("End Element :" + qName);
 	      }
 	   }
    @Override
    public void characters(char ch[], int start, int length) throws SAXException {
 
-      if (bLastName && ("001").equals(empId)) {
+      if (bLastName && (id).equals(empId)) {
          System.out.println("Last Name: " + new String(ch, start, length));
          bLastName = false;
-      } else if (bFirstName && ("001").equals(empId)) {
+      } else if (bFirstName && (id).equals(empId)) {
           System.out.println("First Name: " + new String(ch, start, length));
           bFirstName = false;
-      } else if (bBirthDate && ("001").equals(empId)) {
+      } else if (bBirthDate && (id).equals(empId)) {
          System.out.println("Birth Date: " + new String(ch, start, length));
          bBirthDate = false;
-      } else if (bPosition && ("001").equals(empId)) {
+      } else if (bPosition && (id).equals(empId)) {
          System.out.println("Position: " + new String(ch, start, length));
          bPosition = false;
-      } else if (bSkills && ("001").equals(empId)) {
+      } else if (bSkills && (id).equals(empId)) {
           System.out.println("Skills: " + new String(ch, start, length));
           bSkills = false;
-      } else if (bSkill && ("001").equals(empId)) {
+      } else if (bSkill && (id).equals(empId)) {
           System.out.println("Skill: " + new String(ch, start, length));
           bSkill = false;
-      } else if (bManager && ("001").equals(empId)) {
+      } else if (bManager && (id).equals(empId)) {
           System.out.println("ManagerId: " + new String(ch, start, length));
           bManager = false;
       }
